@@ -57,6 +57,11 @@ Fork the repo, enable Actions, run **Build IPA from your own Spotify IPA**. It t
 your decrypted `.ipa` and hands the built IPA back as a workflow artifact. No Mac needed; the link is
 masked in the log and the result stays in your fork.
 
+The URL must download the file without a login, cookies or a browser challenge; a sharing page is not
+a direct download link. If **Download IPA** reports HTTP 403, the host has denied the Actions runner
+access. Generate a fresh download link, use a host that allows direct downloads from GitHub Actions,
+or build on a Mac below. Retrying the same forbidden URL will not fix it.
+
 ### Build on a Mac
 
 Theos in `~/theos` and Xcode with an iPhoneOS 26+ SDK (`xcode-select` it). An SDK in `~/theos/sdks`
